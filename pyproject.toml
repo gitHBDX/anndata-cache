@@ -12,7 +12,7 @@ maintainers = [{ name = "Maurice Frank", email = "mfrank@hb-dx.com" }]
 dependencies = [
     "anndata==0.8.0",
     "pyarrow==11.0.0",
-    "yaml",
+    "pyyaml",
 ]
 
 [project.urls]
