@@ -1,0 +1,31 @@
+[project]
+name = "anndata-cache"
+version = "2023.11.0"
+description = "An in-memory store for AnnData files using the PyArrow Plasma Store"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["anndata", "pyarrow", "plasma", "cache"]
+authors = [{ name = "Maurice Frank", email = "mfrank@hb-dx.com" }]
+maintainers = [{ name = "Maurice Frank", email = "mfrank@hb-dx.com" }]
+
+
+dependencies = [
+    "anndata=0.8.0",
+    "pyarrow=11.0.0",
+    "yaml",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/gitHBDX/anndata-cache"
+
+# [project.scripts] # Optional
+# sample = "sample:main"
+
+# This is configuration specific to the `setuptools` build backend.
+# If you are using a different build backend, you will need to change this.
+# [tool.setuptools]
+# package-data = {"sample" = ["*.dat"]}
+
+[build-system]
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,12 @@
+[Unit]
+Description=Running PyArrow Plasma
+After=network.target
+
+[Service]
+ExecStart={plasma_bin} -m {size} -s /tmp/plasma-dashboards
+ExecStartPost=/bin/bash -c 'sleep 10; chmod 775 /tmp/plasma-dashboards'
+WorkingDirectory={working_dir}
+Restart=always
+
+[Install]
+WantedBy=default.target
