@@ -29,6 +29,7 @@ You can configure the Store with environment variables:
 
 - `ANNDATA_CACHE_KILL_ON_FAIL` (default: `true`): Whether to kill the whole app on an plasma error. Useful, if an app was was started after the plasma store was started and should auto-restart.
 - `ANNDATA_CACHE_FOLDER`: Location on Disk whether to keep the cold cache
+- `ANNDATA_DATA_FOLDER`: Location on Dist where the original data is stored
 - `ANNDATA_CACHE_PLASMA_LOCATION` (default: `/tmp/plasma-anndata`): Location in-memory where to keep the hot cache
 
 ## Usage

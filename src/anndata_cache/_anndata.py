@@ -162,7 +162,7 @@ def cache_anndata(key: Key, heatup: Union[list[str], bool]):
         if key.location == CacheLocation.HDD:
             filepath = key.name
         else:
-            filepath = Path(os.environ["ANNDATA_CACHE_FOLDER"]) / (key.name + ".h5ad")
+            filepath = Path(os.environ["ANNDATA_DATA_FOLDER"]) / (key.name + ".h5ad")
         ad = read_anndata(filepath)
 
         if key.location == CacheLocation.CACHED:

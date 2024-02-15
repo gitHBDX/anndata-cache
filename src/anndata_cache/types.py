@@ -34,7 +34,7 @@ class Key:
         # right now, i check for 3 or less path components, to allwo for DATASET/DATASET-VERSION/obs.h5  e.g.
         if len(filename.strip("/").split("/")) <= 3:
             self.name = filename.replace(".h5ad", "").strip("/.")
-            self.path = Path(os.environ["ANNDATA_CACHE_FOLDER"]) / (self.name + ".h5ad")
+            self.path = Path(os.environ["ANNDATA_DATA_FOLDER"]) / (self.name + ".h5ad")
             self.location = CacheLocation.CACHED
         else:
             self.name = str(Path(filename).absolute())
