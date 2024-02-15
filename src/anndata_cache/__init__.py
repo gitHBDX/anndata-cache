@@ -23,3 +23,4 @@ except OSError:
 from ._other_types import *
 from .crud import *
 from .meta import *
+from ._anndata import *
