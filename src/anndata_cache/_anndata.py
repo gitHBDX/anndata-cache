@@ -58,7 +58,7 @@ def read_anndata(filepath: str):
     for column in ["Lab_Multiplexing_pool_ID", "ProjectName", "Sample_Type", "Lab_Library_Protocol", "Diagnosis_Group"]:
         if column in ad.obs:
             metadata[column] = ad.obs[column].nunique()
-            indices[column] = ad.obs[column].unique().tolist()
+            indices[column] = list(map(str, ad.obs[column].unique().tolist()))
     for column in ["Sample_Group"]:
         if column in ad.obs:
             for k, v in ad.obs[column].value_counts().to_dict().items():
