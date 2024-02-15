@@ -2,7 +2,7 @@ import os
 
 os.environ["ANNDATA_CACHE_KILL_ON_FAIL"] = os.environ.get("ANNDATA_CACHE_KILL_ON_FAIL", "true")
 os.environ["ANNDATA_CACHE_FOLDER"] = os.environ.get("ANNDATA_CACHE_FOLDER", "/data/hbdx_ldap_local/dashboard_cache/")
-os.environ["ANNDATA_CACHE_PLASMA_LOCATION"] = os.environ.get("ANNDATA_CACHE_PLASMA_LOCATION", "/tmp/plasma-anndata")
+os.environ["ANNDATA_CACHE_PLASMA_LOCATION"] = os.environ.get("ANNDATA_CACHE_PLASMA_LOCATION", "/tmp/plasma-dashboards")
 os.environ["ANNDATA_CACHE_NAME_MAP_ID"] = os.environ.get("ANNDATA_CACHE_NAME_MAP_ID", "/id_name_map")
 
 
