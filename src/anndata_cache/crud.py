@@ -41,7 +41,7 @@ def contains(*keys: Key) -> bool:
     return all(results)
 
 
-def put(obj: Union[pd.DataFrame, np.ndarray], Any, key: Key, overwrite: bool = True) -> None:
+def put(obj: Union[pd.DataFrame, np.ndarray, Any], key: Key, overwrite: bool = True) -> None:
     """Puts the given object into the plasma store using the supplied name.
 
     Parameters
