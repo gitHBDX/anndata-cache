@@ -21,6 +21,7 @@ except OSError:
     logger.error("Could not connect to plasma store. Is it running? Am stopping now.")
     utils.kill_app()
 
+from .types import *
 from ._other_types import *
 from .crud import *
 from .meta import *
