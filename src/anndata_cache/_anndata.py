@@ -55,7 +55,7 @@ def read_anndata(filepath: str):
         "sample annotations": ad.obs.columns.tolist(),
         "feature annotations": ad.var.columns.tolist(),
     }
-    for column in ["Lab_Multiplexing_pool_ID", "ProjectName", "Sample_Type", "Lab_Library_Protocol", "Diagnosis_Group"]:
+    for column in ["Lab_Multiplexing_pool_ID", "ProjectName", "Sample_Type", "Lab_Library_Protocol", "Diagnosis_Group", "Sequencer"]:
         if column in ad.obs:
             metadata[column] = ad.obs[column].nunique()
             indices[column] = list(map(str, ad.obs[column].unique().tolist()))
