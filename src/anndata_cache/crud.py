@@ -76,6 +76,11 @@ def put(obj: Union[pd.DataFrame, np.ndarray, Any], key: Key, overwrite: bool = T
 
         logger.debug(f"Putting {key} into plasma store.")
         if isinstance(obj, pd.DataFrame):
+            # Convert all categories to strings. This is necessary because
+            # pyarrow does not support categorical dtypes.
+            cat_columns = obj.select_dtypes("category").astype(str)
+            obj[cat_columns.columns] = cat_columns
+
             record_batch = pa.RecordBatch.from_pandas(obj)
 
             mock_sink = pa.MockOutputStream()
